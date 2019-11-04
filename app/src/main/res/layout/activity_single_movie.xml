@@ -25,6 +25,29 @@
             android:gravity="center"
             android:text="Problema de Conexion!!"
             android:visibility="gone" />
+        <ScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_movie_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:scaleType="matrix"
+                   />
+
+
+
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
