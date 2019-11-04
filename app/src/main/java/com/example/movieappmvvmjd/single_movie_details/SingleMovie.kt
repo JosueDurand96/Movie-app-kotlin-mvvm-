@@ -2,6 +2,7 @@ package com.example.movieappmvvmjd.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.movieappmvvmjd.R
 
 class SingleMovie : AppCompatActivity() {
 
