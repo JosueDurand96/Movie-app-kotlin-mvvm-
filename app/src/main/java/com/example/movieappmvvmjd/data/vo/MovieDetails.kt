@@ -18,8 +18,8 @@ data class MovieDetails(
     val status: String,
     val tagline: String,
     val title: String,
-    val video: Boolean,
-    @SerializedName("vote_average")
+    val video: Boolean
+    //@SerializedName("vote_average")
    // val spokenLanguages: List<SpokenLanguage>,
    // val voteCount: Int
 )
