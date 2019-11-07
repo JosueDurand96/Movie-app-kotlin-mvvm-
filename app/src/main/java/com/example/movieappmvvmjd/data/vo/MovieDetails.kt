@@ -4,7 +4,6 @@ package com.example.movieappmvvmjd.data.vo
 import com.google.gson.annotations.SerializedName
 
 data class MovieDetails(
-
     val budget: Int,
     val id: Int,
     val overview: String,
@@ -18,8 +17,8 @@ data class MovieDetails(
     val status: String,
     val tagline: String,
     val title: String,
-    val video: Boolean
-    //@SerializedName("vote_average")
-   // val spokenLanguages: List<SpokenLanguage>,
-   // val voteCount: Int
+    val video: Boolean,
+    @SerializedName("vote_average")
+    val rating: Double
+
 )
