@@ -1,5 +1,6 @@
 package com.example.movieappmvvmjd.data.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
@@ -32,15 +33,17 @@ class MovieDetailsNetworkDataSource(
                     .subscribe(
                         {
                             _downloadedMovieDetailsResponse.postValue(it)
+                            _networkState.postValue(NetworkState.LOADED)
                         },
                         {
-
+                            _networkState.postValue(NetworkState.ERROR)
+                            Log.e("MovieDetailsDataSource",it.message)
                         }
 
                     )
             )
         }catch (e:Exception){
-
+            Log.e("MovieDetailsDataSource",e.message)
         }
     }
 
