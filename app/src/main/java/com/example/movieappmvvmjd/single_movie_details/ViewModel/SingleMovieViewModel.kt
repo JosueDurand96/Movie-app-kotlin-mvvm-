@@ -1,8 +1,29 @@
 package com.example.movieappmvvmjd.single_movie_details.ViewModel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.example.movieappmvvmjd.data.repository.NetworkState
+import com.example.movieappmvvmjd.data.vo.MovieDetails
 import com.example.movieappmvvmjd.single_movie_details.Repository.MovieDetailsRepository
+import io.reactivex.disposables.CompositeDisposable
 
-class SingleMovieViewModel(private val movieDetailsRepository: MovieDetailsRepository,movieId:Int):ViewModel() {
+class SingleMovieViewModel(
+    private val movieRepository: MovieDetailsRepository,
+    movieId: Int
+) : ViewModel() {
 
+    private val compositeDisposable = CompositeDisposable()
+
+    val movieDetails:LiveData<MovieDetails>by lazy{
+        movieRepository.fetchSigleMovieDetails(compositeDisposable,movieId)
+    }
+
+    val networkState : LiveData<NetworkState> by lazy {
+        movieRepository.getMovieDetailsNetworkState()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
+    }
 }
