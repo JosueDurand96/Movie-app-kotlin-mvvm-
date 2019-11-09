@@ -2,13 +2,17 @@ package com.example.movieappmvvmjd.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.bumptech.glide.Glide
 import com.example.movieappmvvmjd.R
+import com.example.movieappmvvmjd.data.api.POSTER_BASE_URL
 import com.example.movieappmvvmjd.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.data.repository.NetworkState
 import com.example.movieappmvvmjd.data.vo.MovieDetails
 import com.example.movieappmvvmjd.single_movie_details.Repository.MovieDetailsRepository
 import com.example.movieappmvvmjd.single_movie_details.ViewModel.SingleMovieViewModel
@@ -24,7 +28,7 @@ class SingleMovie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
-        val movieId: Int = 1
+        val movieId: Int = intent.getIntExtra("id",1)
 
         val apiService: TheMovieDBInterface = TheMovieDBClient.getClient()
 
@@ -34,6 +38,12 @@ class SingleMovie : AppCompatActivity() {
 
         viewModel.movieDetails.observe(this, Observer {
             bindUI(it)
+        })
+
+
+        viewModel.networkState.observe(this, Observer {
+            progress_bar.visibility=if (it== NetworkState.LOADING)View.VISIBLE else View.GONE
+            txt_error.visibility= if (it == NetworkState.ERROR)View.VISIBLE else View.GONE
         })
     }
 
@@ -48,6 +58,12 @@ class SingleMovie : AppCompatActivity() {
         val formatCurrency: NumberFormat = NumberFormat.getCurrencyInstance(Locale.US)
         movie_budget.text = formatCurrency.format(it.budget)
         movie_reveue.text = formatCurrency.format(it.revenue)
+
+        val moviePosterURL:String= POSTER_BASE_URL+it.posterPath
+        Glide.with(this)
+            .load(moviePosterURL)
+            .into(iv_movie_poster)
+
 
     }
 
