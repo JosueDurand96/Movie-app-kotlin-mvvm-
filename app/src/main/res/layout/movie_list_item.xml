@@ -34,6 +34,15 @@
             android:maxLines="1"
             android:text="movie"
             android:textSize="12sp" />
-
+        <TextView
+            android:id="@+id/cv_movie_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLength="4"
+            android:text="2019"
+            android:textSize="12sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
