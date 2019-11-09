@@ -7,7 +7,6 @@ import com.example.movieappmvvmjd.data.api.FIRST_PAGE
 import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.data.vo.Movie
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.internal.schedulers.ScheduledDirectTask
 import io.reactivex.schedulers.Schedulers
 
 class MovieDataSource(
@@ -46,16 +45,16 @@ class MovieDataSource(
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiService.getPopularMovie(params.key )
+            apiService.getPopularMovie(params.key)
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {
-                      if (it.totalPages >= params.key){
-                          callback.onResult(it.results,params.key+1)
-                          networkState.postValue(NetworkState.LOADED)
-                      }else{
-                        networkState.postValue(NetworkState.ENDOFLIST )
-                      }
+                        if (it.totalPages >= params.key) {
+                            callback.onResult(it.results, params.key + 1)
+                            networkState.postValue(NetworkState.LOADED)
+                        } else {
+                            networkState.postValue(NetworkState.ENDOFLIST)
+                        }
                     },
                     {
                         networkState.postValue(NetworkState.ERROR)

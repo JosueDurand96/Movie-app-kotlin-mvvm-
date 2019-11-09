@@ -13,11 +13,10 @@ import java.util.concurrent.TimeUnit
 const val API_KEY = "99d85c25122fe5055a7ca95e57f408fd"
 const val BASE_URL = "https://api.themoviedb.org/3/"
 const val POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342"
-
 const val FIRST_PAGE = 1
 const val POST_PER_PAGE = 20
-//https://api.themoviedb.org/3/movie/550?api_key=99d85c25122fe5055a7ca95e57f408fd
 
+//https://api.themoviedb.org/3/movie/550?api_key=99d85c25122fe5055a7ca95e57f408fd
 //https://api.themoviedb.org/3/popular?api_key=99d85c25122fe5055a7ca95e57f408fd
 //https://api.themoviedb.org/3/movie/2999534?api_key=99d85c25122fe5055a7ca95e57f408fd
 //https://image.tmdb.org/t/p/w342/or06FN3Dka5tukK1e9sl16pB3iy.jpg
