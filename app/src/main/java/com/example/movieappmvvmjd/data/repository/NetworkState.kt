@@ -3,7 +3,8 @@ package com.example.movieappmvvmjd.data.repository
 enum class Status {
     RUNNING,
     SUCCESS,
-    FAILED
+    FAILED,
+    ENDOFLIST
 }
 
 class NetworkState(val status: Status, val msg: String) {
@@ -11,11 +12,13 @@ class NetworkState(val status: Status, val msg: String) {
         val LOADED: NetworkState
         val LOADING: NetworkState
         val ERROR: NetworkState
+        val ENDOFLIST:NetworkState
 
         init {
             LOADED = NetworkState(Status.SUCCESS, "Success")
             LOADING = NetworkState(Status.RUNNING, "Running")
             ERROR = NetworkState(Status.FAILED, "Something went wrong")
+            ENDOFLIST = NetworkState(Status.ENDOFLIST,"You have reached the end")
         }
     }
 }
