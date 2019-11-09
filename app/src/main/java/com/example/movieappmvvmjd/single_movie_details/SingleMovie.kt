@@ -2,14 +2,19 @@ package com.example.movieappmvvmjd.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.movieappmvvmjd.R
 import com.example.movieappmvvmjd.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.data.vo.MovieDetails
 import com.example.movieappmvvmjd.single_movie_details.Repository.MovieDetailsRepository
 import com.example.movieappmvvmjd.single_movie_details.ViewModel.SingleMovieViewModel
+import kotlinx.android.synthetic.main.activity_single_movie.*
+import java.text.NumberFormat
+import java.util.*
 
 class SingleMovie : AppCompatActivity() {
 
@@ -26,13 +31,32 @@ class SingleMovie : AppCompatActivity() {
         movieRepository = MovieDetailsRepository(apiService)
 
         viewModel = getViewModel(movieId)
+
+        viewModel.movieDetails.observe(this, Observer {
+            bindUI(it)
+        })
     }
 
+    fun bindUI(it: MovieDetails) {
+        movie_title.text = it.title
+        movie_tagline.text = it.tagline
+        movie_release_date.text = it.releaseDate
+        movie_rating.text = it.rating.toString()
+        movie_runtime.text = it.runtime.toString() + " minutos"
+        movie_overview.text = it.overview
+
+        val formatCurrency: NumberFormat = NumberFormat.getCurrencyInstance(Locale.US)
+        movie_budget.text = formatCurrency.format(it.budget)
+        movie_reveue.text = formatCurrency.format(it.revenue)
+
+    }
+
+
     private fun getViewModel(movieId: Int): SingleMovieViewModel {
-        return ViewModelProviders.of(this,object :ViewModelProvider.Factory{
+        return ViewModelProviders.of(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return SingleMovieViewModel(movieRepository,movieId) as T
+                return SingleMovieViewModel(movieRepository, movieId) as T
             }
         })[SingleMovieViewModel::class.java]
     }
