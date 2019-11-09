@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import java.util.concurrent.TimeUnit
 
-const val API_KEY = ""
+const val API_KEY = "99d85c25122fe5055a7ca95e57f408fd"
 const val BASE_URL = "https://api.themoviedb.org/3/"
 const val POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342"
 

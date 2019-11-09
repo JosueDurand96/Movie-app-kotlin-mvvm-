@@ -28,7 +28,8 @@ class SingleMovie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
-        val movieId: Int = intent.getIntExtra("id",1)
+
+        val movieId: Int = intent.getIntExtra("id", 1)
 
         val apiService: TheMovieDBInterface = TheMovieDBClient.getClient()
 
@@ -42,8 +43,8 @@ class SingleMovie : AppCompatActivity() {
 
 
         viewModel.networkState.observe(this, Observer {
-            progress_bar.visibility=if (it== NetworkState.LOADING)View.VISIBLE else View.GONE
-            txt_error.visibility= if (it == NetworkState.ERROR)View.VISIBLE else View.GONE
+            progress_bar.visibility = if (it == NetworkState.LOADING) View.VISIBLE else View.GONE
+            txt_error.visibility = if (it == NetworkState.ERROR) View.VISIBLE else View.GONE
         })
     }
 
@@ -59,7 +60,7 @@ class SingleMovie : AppCompatActivity() {
         movie_budget.text = formatCurrency.format(it.budget)
         movie_reveue.text = formatCurrency.format(it.revenue)
 
-        val moviePosterURL:String= POSTER_BASE_URL+it.posterPath
+        val moviePosterURL: String = POSTER_BASE_URL + it.posterPath
         Glide.with(this)
             .load(moviePosterURL)
             .into(iv_movie_poster)
