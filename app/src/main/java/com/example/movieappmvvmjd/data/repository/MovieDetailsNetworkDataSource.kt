@@ -37,13 +37,13 @@ class MovieDetailsNetworkDataSource(
                         },
                         {
                             _networkState.postValue(NetworkState.ERROR)
-                            Log.e("MovieDetailsDataSource",it.message)
+                            Log.e("MovieDetailsDataSource", it.message)
                         }
 
                     )
             )
-        }catch (e:Exception){
-            Log.e("MovieDetailsDataSource",e.message)
+        } catch (e: Exception) {
+            Log.e("MovieDetailsDataSource", e.message)
         }
     }
 
