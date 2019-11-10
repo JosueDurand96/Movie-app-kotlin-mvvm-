@@ -262,7 +262,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="overview...... "
-                                android:inputType="textMultiLine"
+                                android:inputType="textImeMultiLine"
                                 android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
