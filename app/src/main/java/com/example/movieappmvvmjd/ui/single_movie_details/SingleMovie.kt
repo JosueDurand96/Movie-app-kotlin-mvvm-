@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.single_movie_details
+package com.example.movieappmvvmjd.ui.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,8 +14,8 @@ import com.example.movieappmvvmjd.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.data.repository.NetworkState
 import com.example.movieappmvvmjd.data.vo.MovieDetails
-import com.example.movieappmvvmjd.single_movie_details.Repository.MovieDetailsRepository
-import com.example.movieappmvvmjd.single_movie_details.ViewModel.SingleMovieViewModel
+import com.example.movieappmvvmjd.ui.single_movie_details.Repository.MovieDetailsRepository
+import com.example.movieappmvvmjd.ui.single_movie_details.ViewModel.SingleMovieViewModel
 import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
 import java.util.*
