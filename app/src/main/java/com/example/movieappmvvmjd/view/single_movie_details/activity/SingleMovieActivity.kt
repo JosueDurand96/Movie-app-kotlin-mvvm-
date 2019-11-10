@@ -2,7 +2,11 @@ package com.example.movieappmvvmjd.view.single_movie_details.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout.JUSTIFICATION_MODE_INTER_WORD
+import android.text.Layout.JUSTIFICATION_MODE_NONE
 import android.view.View
+import android.webkit.WebView
+import android.widget.LinearLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -28,6 +32,8 @@ class SingleMovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
+
+
 
         val movieId: Int = intent.getIntExtra("id", 1)
 
@@ -56,10 +62,13 @@ class SingleMovieActivity : AppCompatActivity() {
         movie_runtime.text = it.runtime.toString() + " minutos"
         movie_overview.text = it.overview
 
+
+
         val formatCurrency: NumberFormat = NumberFormat.getCurrencyInstance(Locale.US)
         movie_budget.text = formatCurrency.format(it.budget)
         movie_reveue.text = formatCurrency.format(it.revenue)
 
+        //movie_overview.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD)
         val moviePosterURL: String = POSTER_BASE_URL + it.posterPath
         Glide.with(this)
             .load(moviePosterURL)
