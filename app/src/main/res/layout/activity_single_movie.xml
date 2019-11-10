@@ -93,16 +93,16 @@
                             android:layout_height="wrap_content"
                             android:text="Sub title"
                             android:textColor="@android:color/holo_blue_light"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
-                            android:text="Movie Info"
+                            android:text="Información de la Película"
                             android:textColor="@android:color/holo_green_dark"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -115,7 +115,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@android:color/holo_purple"
-                                android:text="Release date: "
+                                android:text="Fecha de lanzamiento: "
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -138,7 +138,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Rating: "
+                                android:text="Clasificación: "
+                                android:textColor="@android:color/holo_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -147,6 +148,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
+                                android:textColor="@android:color/holo_green_light"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -159,7 +161,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Runtime: "
+                                android:text="Duración : "
+                                android:textColor="@android:color/holo_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -168,6 +171,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
+                                android:textColor="@android:color/holo_green_light"
+
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -180,7 +185,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Budget: "
+                                android:text="Presupuesto: "
+                                android:textColor="@android:color/holo_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -189,6 +195,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
+                                android:textColor="@android:color/holo_green_light"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -201,7 +208,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Revenue: "
+                                android:text="Ingresos: "
+                                android:textColor="@android:color/holo_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -210,6 +218,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
+                                android:textColor="@android:color/holo_green_light"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -222,6 +231,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_green_light"
                                 android:text="Overview: "
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -232,6 +242,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="overview...... "
 
+                                android:textColor="@android:color/holo_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
