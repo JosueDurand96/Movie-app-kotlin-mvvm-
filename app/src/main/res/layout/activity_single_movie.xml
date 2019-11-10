@@ -39,14 +39,16 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:orientation="vertical">
-                    <ImageView
+                    android:layout_height="520dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
+                    <ImageView
                         android:id="@+id/iv_movie_poster"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_local_movies_black_24dp" />
 
                 </LinearLayout>
@@ -189,29 +191,30 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Overview: "
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/movie_overview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="overview...... "
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Overview: "
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/movie_overview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="overview...... "
+
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
                 </LinearLayout>
+
 
             </LinearLayout>
         </ScrollView>
