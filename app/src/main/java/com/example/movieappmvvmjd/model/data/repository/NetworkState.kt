@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.data.repository
+package com.example.movieappmvvmjd.model.data.repository
 
 enum class Status {
     RUNNING,

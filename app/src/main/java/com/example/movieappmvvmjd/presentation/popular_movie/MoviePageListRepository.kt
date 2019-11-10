@@ -1,17 +1,16 @@
-package com.example.movieappmvvmjd.ui.popular_movie
+package com.example.movieappmvvmjd.presentation.popular_movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.example.movieappmvvmjd.data.api.POST_PER_PAGE
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.repository.MovieDataSource
-import com.example.movieappmvvmjd.data.repository.MovieDataSourceFactory
-import com.example.movieappmvvmjd.data.repository.NetworkState
-import com.example.movieappmvvmjd.data.vo.Movie
+import com.example.movieappmvvmjd.model.data.api.POST_PER_PAGE
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.repository.MovieDataSource
+import com.example.movieappmvvmjd.model.data.repository.MovieDataSourceFactory
+import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.model.data.vo.Movie
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.internal.disposables.ArrayCompositeDisposable
 
 class MoviePageListRepository(private val apiService: TheMovieDBInterface) {
     lateinit var moviePagedList: LiveData<PagedList<Movie>>

@@ -1,10 +1,10 @@
-package com.example.movieappmvvmjd.ui.single_movie_details.Repository
+package com.example.movieappmvvmjd.presentation.single_movie_details.Repository
 
 import androidx.lifecycle.LiveData
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.repository.MovieDetailsNetworkDataSource
-import com.example.movieappmvvmjd.data.repository.NetworkState
-import com.example.movieappmvvmjd.data.vo.MovieDetails
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.repository.MovieDetailsNetworkDataSource
+import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.model.data.vo.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
 
 class MovieDetailsRepository(private val apiService: TheMovieDBInterface) {

@@ -1,10 +1,10 @@
-package com.example.movieappmvvmjd.ui.single_movie_details.ViewModel
+package com.example.movieappmvvmjd.presentation.single_movie_details.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.example.movieappmvvmjd.data.repository.NetworkState
-import com.example.movieappmvvmjd.data.vo.MovieDetails
-import com.example.movieappmvvmjd.ui.single_movie_details.Repository.MovieDetailsRepository
+import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.model.data.vo.MovieDetails
+import com.example.movieappmvvmjd.presentation.single_movie_details.Repository.MovieDetailsRepository
 import io.reactivex.disposables.CompositeDisposable
 
 class SingleMovieViewModel(

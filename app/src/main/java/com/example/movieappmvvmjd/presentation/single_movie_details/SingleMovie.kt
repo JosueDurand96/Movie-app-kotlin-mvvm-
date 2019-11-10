@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.ui.single_movie_details
+package com.example.movieappmvvmjd.presentation.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,13 +9,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.movieappmvvmjd.R
-import com.example.movieappmvvmjd.data.api.POSTER_BASE_URL
-import com.example.movieappmvvmjd.data.api.TheMovieDBClient
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.repository.NetworkState
-import com.example.movieappmvvmjd.data.vo.MovieDetails
-import com.example.movieappmvvmjd.ui.single_movie_details.Repository.MovieDetailsRepository
-import com.example.movieappmvvmjd.ui.single_movie_details.ViewModel.SingleMovieViewModel
+import com.example.movieappmvvmjd.model.data.api.POSTER_BASE_URL
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.model.data.vo.MovieDetails
+import com.example.movieappmvvmjd.presentation.single_movie_details.Repository.MovieDetailsRepository
+import com.example.movieappmvvmjd.presentation.single_movie_details.ViewModel.SingleMovieViewModel
 import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
 import java.util.*

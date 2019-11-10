@@ -1,11 +1,11 @@
-package com.example.movieappmvvmjd.data.repository
+package com.example.movieappmvvmjd.model.data.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
-import com.example.movieappmvvmjd.data.api.FIRST_PAGE
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.vo.Movie
+import com.example.movieappmvvmjd.model.data.api.FIRST_PAGE
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.vo.Movie
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 

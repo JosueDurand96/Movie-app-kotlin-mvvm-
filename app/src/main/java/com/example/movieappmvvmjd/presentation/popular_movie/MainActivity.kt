@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.ui.popular_movie
+package com.example.movieappmvvmjd.presentation.popular_movie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movieappmvvmjd.R
-import com.example.movieappmvvmjd.data.api.TheMovieDBClient
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.repository.NetworkState
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

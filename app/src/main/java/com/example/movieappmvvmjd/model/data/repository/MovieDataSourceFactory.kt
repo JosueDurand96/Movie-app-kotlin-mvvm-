@@ -1,10 +1,10 @@
-package com.example.movieappmvvmjd.data.repository
+package com.example.movieappmvvmjd.model.data.repository
 
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
-import com.example.movieappmvvmjd.data.api.TheMovieDBInterface
-import com.example.movieappmvvmjd.data.vo.Movie
+import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
+import com.example.movieappmvvmjd.model.data.vo.Movie
 import io.reactivex.disposables.CompositeDisposable
 
 class MovieDataSourceFactory(
