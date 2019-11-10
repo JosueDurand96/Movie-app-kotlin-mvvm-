@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.view.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -13,7 +13,7 @@ import com.example.movieappmvvmjd.R
 import com.example.movieappmvvmjd.model.data.api.POSTER_BASE_URL
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import com.example.movieappmvvmjd.model.data.vo.Movie
-import com.example.movieappmvvmjd.view.single_movie_details.SingleMovie
+import com.example.movieappmvvmjd.view.single_movie_details.SingleMovieActivity
 import kotlinx.android.synthetic.main.movie_list_item.view.*
 import kotlinx.android.synthetic.main.network_state_item.view.*
 
@@ -31,10 +31,14 @@ class PopularMoviePageListAdapter(val context: Context) :
         val view: View
         if (viewType == MOVIE_VIEW_TYPE) {
             view = layoutInflater.inflate(R.layout.movie_list_item, parent, false)
-            return MovieItemViewHolder(view)
+            return MovieItemViewHolder(
+                view
+            )
         } else {
             view = layoutInflater.inflate(R.layout.network_state_item, parent, false)
-            return NetworkStateItemViewHolder(view)
+            return NetworkStateItemViewHolder(
+                view
+            )
         }
     }
 
@@ -85,7 +89,7 @@ class PopularMoviePageListAdapter(val context: Context) :
                 .load(moviePosterURL)
                 .into(itemView.cv_iv_movie_poster)
             itemView.setOnClickListener {
-                val intent = Intent(context, SingleMovie::class.java)
+                val intent = Intent(context, SingleMovieActivity::class.java)
                 intent.putExtra("id", movie?.id)
                 context.startActivity(intent)
             }

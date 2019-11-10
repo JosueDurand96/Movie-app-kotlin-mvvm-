@@ -13,7 +13,7 @@ import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import com.example.movieappmvvmjd.view.popular_movie.viewModel.MainActivityViewModel
-import com.example.movieappmvvmjd.view.popular_movie.PopularMoviePageListAdapter
+import com.example.movieappmvvmjd.view.popular_movie.adapter.PopularMoviePageListAdapter
 import com.example.movieappmvvmjd.view.popular_movie.repository.MoviePageListRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
