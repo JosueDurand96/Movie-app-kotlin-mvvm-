@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 if (viewModel.listIsEmpty() && it == NetworkState.ERROR) View.VISIBLE else View.GONE
 
 
-            if (!viewModel.listIsEmpty()){
+            if (!viewModel.listIsEmpty()) {
                 movieAdapter.setNetworkState(it)
             }
         })
