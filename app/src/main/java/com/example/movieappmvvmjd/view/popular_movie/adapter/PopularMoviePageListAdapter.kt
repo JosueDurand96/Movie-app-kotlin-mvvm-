@@ -13,7 +13,7 @@ import com.example.movieappmvvmjd.R
 import com.example.movieappmvvmjd.model.data.api.POSTER_BASE_URL
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import com.example.movieappmvvmjd.model.data.vo.Movie
-import com.example.movieappmvvmjd.view.single_movie_details.SingleMovieActivity
+import com.example.movieappmvvmjd.view.single_movie_details.activity.SingleMovieActivity
 import kotlinx.android.synthetic.main.movie_list_item.view.*
 import kotlinx.android.synthetic.main.network_state_item.view.*
 
