@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.presentation.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations

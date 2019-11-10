@@ -1,10 +1,11 @@
-package com.example.movieappmvvmjd.presentation.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagedList
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import com.example.movieappmvvmjd.model.data.vo.Movie
+import com.example.movieappmvvmjd.view.popular_movie.repository.MoviePageListRepository
 import io.reactivex.disposables.CompositeDisposable
 
 class MainActivityViewModel(private val movieRepository: MoviePageListRepository) : ViewModel() {

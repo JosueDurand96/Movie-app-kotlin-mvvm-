@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.presentation.single_movie_details
+package com.example.movieappmvvmjd.view.single_movie_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,8 +14,8 @@ import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
 import com.example.movieappmvvmjd.model.data.vo.MovieDetails
-import com.example.movieappmvvmjd.presentation.single_movie_details.Repository.MovieDetailsRepository
-import com.example.movieappmvvmjd.presentation.single_movie_details.ViewModel.SingleMovieViewModel
+import com.example.movieappmvvmjd.view.single_movie_details.Repository.MovieDetailsRepository
+import com.example.movieappmvvmjd.view.single_movie_details.ViewModel.SingleMovieViewModel
 import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
 import java.util.*
@@ -73,7 +73,10 @@ class SingleMovie : AppCompatActivity() {
         return ViewModelProviders.of(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return SingleMovieViewModel(movieRepository, movieId) as T
+                return SingleMovieViewModel(
+                    movieRepository,
+                    movieId
+                ) as T
             }
         })[SingleMovieViewModel::class.java]
     }

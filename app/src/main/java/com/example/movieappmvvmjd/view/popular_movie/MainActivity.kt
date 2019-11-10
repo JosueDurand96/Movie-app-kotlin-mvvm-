@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.presentation.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +12,7 @@ import com.example.movieappmvvmjd.R
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.view.popular_movie.repository.MoviePageListRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val apiService: TheMovieDBInterface = TheMovieDBClient.getClient()
-        moviePageListRepository = MoviePageListRepository(apiService)
+        moviePageListRepository =
+            MoviePageListRepository(
+                apiService
+            )
         viewModel = getViewModel()
         val movieAdapter = PopularMoviePageListAdapter(this)
         val gridLayoutManager = GridLayoutManager(this, 3)
