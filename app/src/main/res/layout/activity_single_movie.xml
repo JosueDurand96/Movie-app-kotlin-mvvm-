@@ -83,25 +83,41 @@
                             android:layout_height="wrap_content"
                             android:text="Movie"
                             android:gravity="center"
-                            android:textColor="@android:color/primary_text_light_nodisable"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="23sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/movie_tagline"
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sub title"
-                            android:textColor="@android:color/holo_blue_light"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub Título:   "
+                                android:textColor="@color/colorBlue"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/movie_tagline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub title"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:text="Información de la Película"
-                            android:textColor="@android:color/holo_green_dark"
+                            android:textColor="@android:color/holo_purple"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
