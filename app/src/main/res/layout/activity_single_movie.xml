@@ -114,7 +114,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:textColor="@android:color/holo_purple"
+
+                                android:textColor="@color/colorBlue"
                                 android:text="Fecha de lanzamiento: "
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -123,7 +124,8 @@
                                 android:id="@+id/movie_release_date"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@android:color/holo_green_light"
+
+                                android:textColor="@color/colorBlueLight"
                                 android:layout_marginTop="15dp"
                                 android:text="2019 "
                                 android:textSize="14sp"
@@ -139,7 +141,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Clasificación: "
-                                android:textColor="@android:color/holo_purple"
+
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -148,7 +151,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
-                                android:textColor="@android:color/holo_green_light"
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -162,7 +165,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Duración : "
-                                android:textColor="@android:color/holo_purple"
+
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -171,8 +175,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
-                                android:textColor="@android:color/holo_green_light"
-
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -186,7 +189,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Presupuesto: "
-                                android:textColor="@android:color/holo_purple"
+
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -195,7 +199,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
-                                android:textColor="@android:color/holo_green_light"
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -209,7 +213,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ingresos: "
-                                android:textColor="@android:color/holo_purple"
+
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -218,7 +223,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8 "
-                                android:textColor="@android:color/holo_green_light"
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -231,7 +236,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@android:color/holo_green_light"
+                                android:textColor="@color/colorBlue"
                                 android:text="Overview: "
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -242,7 +247,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="overview...... "
 
-                                android:textColor="@android:color/holo_purple"
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
