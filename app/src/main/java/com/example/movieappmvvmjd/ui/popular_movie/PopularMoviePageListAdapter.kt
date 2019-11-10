@@ -58,6 +58,15 @@ class PopularMoviePageListAdapter(val context: Context) :
     }
 
 
+    override fun getItemViewType(position: Int): Int {
+        return if (hasExtraRow() && position == itemCount - 1) {
+            NETWORK_VIEW_TYPE
+        } else {
+            MOVIE_VIEW_TYPE
+        }
+    }
+
+
     class MovieDiffCallback : DiffUtil.ItemCallback<Movie>() {
         override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
             return oldItem.id == newItem.id
@@ -102,6 +111,11 @@ class PopularMoviePageListAdapter(val context: Context) :
                 itemView.error_msg_item.visibility = View.GONE
             }
         }
+    }
+
+    fun setNetworkState(networkState: NetworkState) {
+        val previousState: NetworkState? = this.networkState
+        val hadExtraRow: Boolean = hasExtraRow()
     }
 
 }
