@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.view.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

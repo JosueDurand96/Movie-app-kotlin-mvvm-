@@ -1,4 +1,4 @@
-package com.example.movieappmvvmjd.view.popular_movie
+package com.example.movieappmvvmjd.view.popular_movie.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +12,8 @@ import com.example.movieappmvvmjd.R
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBClient
 import com.example.movieappmvvmjd.model.data.api.TheMovieDBInterface
 import com.example.movieappmvvmjd.model.data.repository.NetworkState
+import com.example.movieappmvvmjd.view.popular_movie.viewModel.MainActivityViewModel
+import com.example.movieappmvvmjd.view.popular_movie.PopularMoviePageListAdapter
 import com.example.movieappmvvmjd.view.popular_movie.repository.MoviePageListRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,7 +32,8 @@ class MainActivity : AppCompatActivity() {
                 apiService
             )
         viewModel = getViewModel()
-        val movieAdapter = PopularMoviePageListAdapter(this)
+        val movieAdapter =
+            PopularMoviePageListAdapter(this)
         val gridLayoutManager = GridLayoutManager(this, 3)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
@@ -65,7 +68,9 @@ class MainActivity : AppCompatActivity() {
         return ViewModelProviders.of(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return MainActivityViewModel(moviePageListRepository) as T
+                return MainActivityViewModel(
+                    moviePageListRepository
+                ) as T
             }
         })[MainActivityViewModel::class.java]
     }
