@@ -22,6 +22,7 @@
             android:id="@+id/txt_error"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@android:color/holo_red_dark"
             android:gravity="center"
             android:text="Problema de Conexión!!"
             android:visibility="gone" />
@@ -81,8 +82,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Movie"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="20sp"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="23sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -90,6 +91,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sub title"
+                            android:textColor="@android:color/holo_blue_light"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -98,6 +100,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:text="Movie Info"
+                            android:textColor="@android:color/holo_green_dark"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
