@@ -105,7 +105,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Sub title"
-                                android:textColor="@color/colorBlue"
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
 
@@ -259,10 +259,10 @@
 
                             <TextView
                                 android:id="@+id/movie_overview"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="overview...... "
-
+                                android:inputType="textMultiLine"
                                 android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
