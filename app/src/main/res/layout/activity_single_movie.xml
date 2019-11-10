@@ -82,6 +82,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Movie"
+                            android:gravity="center"
                             android:textColor="@android:color/holo_blue_dark"
                             android:textSize="23sp"
                             android:textStyle="bold" />
@@ -113,6 +114,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
+                                android:textColor="@android:color/holo_purple"
                                 android:text="Release date: "
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -121,6 +123,7 @@
                                 android:id="@+id/movie_release_date"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_green_light"
                                 android:layout_marginTop="15dp"
                                 android:text="2019 "
                                 android:textSize="14sp"
