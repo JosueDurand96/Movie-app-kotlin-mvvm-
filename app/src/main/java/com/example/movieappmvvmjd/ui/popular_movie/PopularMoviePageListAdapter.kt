@@ -116,6 +116,18 @@ class PopularMoviePageListAdapter(val context: Context) :
     fun setNetworkState(networkState: NetworkState) {
         val previousState: NetworkState? = this.networkState
         val hadExtraRow: Boolean = hasExtraRow()
+        this.networkState=networkState
+        val hasExtraRow:Boolean=hasExtraRow()
+
+        if (hadExtraRow != hasExtraRow){
+            if (hadExtraRow){
+                notifyItemRemoved(super.getItemCount())
+            }else{
+                notifyItemInserted(super.getItemCount())
+            }
+        }else if (hasExtraRow && previousState != networkState){
+            notifyItemChanged(itemCount-1)
+        }
     }
 
 }
