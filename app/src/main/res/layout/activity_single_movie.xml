@@ -22,9 +22,9 @@
             android:id="@+id/txt_error"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@android:color/holo_red_dark"
             android:gravity="center"
             android:text="Problema de Conexión!!"
+            android:textColor="@android:color/holo_red_dark"
             android:visibility="gone" />
 
         <ScrollView
@@ -81,17 +81,18 @@
                             android:id="@+id/movie_title"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Movie"
                             android:gravity="center"
+                            android:text="Movie"
                             android:textColor="@color/colorPrimary"
                             android:textSize="23sp"
                             android:textStyle="bold" />
 
                         <LinearLayout
-                            android:layout_marginTop="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:orientation="horizontal">
+
                             <TextView
 
                                 android:layout_width="wrap_content"
@@ -100,6 +101,7 @@
                                 android:textColor="@color/colorBlue"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
+
                             <TextView
                                 android:id="@+id/movie_tagline"
                                 android:layout_width="wrap_content"
@@ -131,8 +133,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
 
-                                android:textColor="@color/colorBlue"
                                 android:text="Fecha de lanzamiento: "
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -141,9 +143,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
 
-                                android:textColor="@color/colorBlueLight"
                                 android:layout_marginTop="15dp"
                                 android:text="2019 "
+                                android:textColor="@color/colorBlueLight"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -252,20 +254,31 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/colorBlue"
                                 android:text="Overview: "
+                                android:textColor="@color/colorBlue"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/movie_overview"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="overview...... "
-                                android:inputType="textMultiLine|textAutoComplete"
-                                android:textColor="@color/colorBlueLight"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/movie_overview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_vertical|clip_horizontal"
+                                    android:inputType="textMultiLine"
+                                    android:text="ojsijaoijaidjiodjiojdiajsjajsoajsoajosjaojsoaojsoajsojaosjaojsoajsoajsoajosjaojsoajosjaojsoajsojojojwsmkwmskwmskwmkswmksmwksmwo"
+                                    android:textColor="@color/colorBlueLight"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
